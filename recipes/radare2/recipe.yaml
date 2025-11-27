@@ -1,7 +1,7 @@
 context:
   name: radare2
-  version: 6.0.4
-  sha256: d5d92e3a2dbe050be1ce0ec2a2cd2e408b068ae69d6a6485b57a5df88fa63ba3
+  version: 6.0.7
+  sha256: 099af2b2ad97295c81f7ee6ed3ea8da961b5c66a08e1d2701722912f50d791cc
 
 package:
   name: ${{ name }}
@@ -21,7 +21,7 @@ requirements:
 
 tests:
   - script:
-      - r2 --help
+      - r2 -h
 
 about:
   homepage: https://radare.org
