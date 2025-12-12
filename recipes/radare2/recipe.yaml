@@ -25,8 +25,11 @@ tests:
 
 about:
   homepage: https://radare.org
+  license: Radare2
+  license_file: COPYING.md
   summary: UNIX-like reverse engineering framework and command-line toolset
   description: |
     A free/libre toolchain for easing several low level tasks like forensics,
     software reverse engineering, exploiting, debugging, etc.
+  documentation: https://book.rada.re
   repository: https://github.com/radareorg/radare2
