@@ -33,6 +33,6 @@ about:
   license: MIT
   license_file: LICENSE
   summary: ni - use the right package manager
-  description: ni - use the right package manager
+  description: ni detects your active package manager and uses the right one.
   documentation: https://github.com/antfu-collective/ni
   repository: https://github.com/antfu-collective/ni
