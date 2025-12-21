@@ -1,0 +1,47 @@
+context:
+  name: qutebrowser
+  version: 3.6.3
+  sha256: 6dbe2889e61ebd63003ae40b319e1e81f306e924e8316c6795ae4884021c2faf
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/qutebrowser/${{ name }}/releases/download/v${{ version }}/${{ name }}-${{ version }}.tar.gz
+  sha256: ${{ sha256 }}
+
+build:
+  noarch: python
+  script: pip install . -vv
+
+requirements:
+  host:
+    - python >= 3.9
+    - pip
+    - setuptools
+    - wheel
+  run:
+    - python >= 3.9
+    - qt >= 5.15.0
+    - pyqt >= 5.15.0
+    - jinja2
+    - pyyaml
+
+tests:
+  - python:
+      imports:
+        - qutebrowser
+      pip_check: true
+
+about:
+  homepage: https://qutebrowser.org
+  license: GPL-3.0-only
+  license_file: LICENSE
+  summary: A keyboard-driven, vim-like browser based on Python and Qt
+  description: |
+    qutebrowser is a keyboard-focused browser with a minimal GUI. It is based
+    on Python and Qt and free software, licensed under the GPL. It was inspired
+    by other browsers/addons like dwb and Vimperator/Pentadactyl.
+  documentation: https://qutebrowser.org/doc/help
+  repository: https://github.com/qutebrowser/qutebrowser

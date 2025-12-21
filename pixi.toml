@@ -9,7 +9,7 @@ version = "0.1.0"
 build = "rattler-build build --recipe-dir . --output-dir packages/"
 build-only = { args = ["name"], cmd = "rattler-build build --recipe recipes/{{ name }} --output-dir packages/" }
 clean = "rm -rf packages/ && pixi clean"
-clean-pkg = "rm -rf packages/bld/ packages/src_cache/ packages/test/"
+clean-pkg = "find packages -depth 1 -not -name osx-64 -not -name noarch -not -name osx-arm64 -not -name linux-64 -print -exec rm -rf '{}' '+'"
 fmt-yaml = "yamlfmt"
 
 [dependencies]
