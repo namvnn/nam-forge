@@ -14,7 +14,7 @@ source:
 
 build:
   script:
-    - npm install -g ${{ name }}-${{ version }}.tgz --prefix ${{ PREFIX }}
+    - npm install -g ${{ name }}-${{ version }}.tgz --prefix "${PREFIX}"
     - tar -xvf ${{ name }}-${{ version }}.tgz && cp -R package/ .
 
 requirements:
