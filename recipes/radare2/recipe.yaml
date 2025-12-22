@@ -25,7 +25,7 @@ tests:
 
 about:
   homepage: https://radare.org
-  license: Radare2
+  license: LicenseRef-Radare2
   license_file: COPYING.md
   summary: UNIX-like reverse engineering framework and command-line toolset
   description: |
