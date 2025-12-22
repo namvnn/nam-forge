@@ -4,6 +4,7 @@
 not find in public forges such as [conda-forge](https://github.com/conda-forge).
 
 - [ni](https://github.com/antfu-collective/ni)
+- [qutebrowser](https://github.com/qutebrowser/qutebrowser)
 - [radare2](https://github.com/radareorg/radare2)
 
 ## License
