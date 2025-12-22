@@ -1,13 +1,14 @@
 [workspace]
+name = "nam-forge"
+version = "0.1.0"
+description = "Nam's recipes for Pixi package manager"
 authors = ["Nam Nguyen <nguyenvietnam2401@gmail.com>"]
 channels = ["conda-forge"]
-name = "nam-forge"
 platforms = ["osx-64", "osx-arm64", "linux-64"]
-version = "0.1.0"
 
 [tasks]
-build = "rattler-build build --recipe-dir . --output-dir packages/"
-build-only = { args = ["name"], cmd = "rattler-build build --recipe recipes/{{ name }} --output-dir packages/" }
+build = "rattler-build build --recipe-dir . --output-dir packages/ --skip-existing all"
+build-only = { args = ["name"], cmd = "rattler-build build --recipe recipes/{{ name }} --output-dir packages/ --skip-existing all" }
 clean = "rm -rf packages/ && pixi clean"
 clean-pkg = "find packages -depth 1 -not -name osx-64 -not -name noarch -not -name osx-arm64 -not -name linux-64 -print -exec rm -rf '{}' '+'"
 fmt-yaml = "yamlfmt"
