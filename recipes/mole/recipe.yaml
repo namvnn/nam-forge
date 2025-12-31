@@ -1,0 +1,36 @@
+context:
+  name: mole
+  version: 1.17.0
+  sha256: 327717e53c4d61d4a2f076b3f9b8dc9f79f2d95c1bb135d38be0110e38bc6089
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/tw93/Mole/archive/refs/tags/V${{ version }}.tar.gz
+  sha256: ${{ sha256 }}
+
+build:
+  script: 
+    - make build
+    - mkdir "${PREFIX}/bin"
+    - mv ./mo  ./mole ./bin/ ./lib/ "${PREFIX}/bin"
+
+requirements:
+  build:
+    - ${{ compiler('go-nocgo') }}
+    - make
+
+tests:
+  - script:
+      - mo -h
+
+about:
+  homepage: https://github.com/tw93/Mole
+  license: MIT
+  license_file: LICENSE
+  summary: Deep clean and optimize your Mac
+  description: mole deep cleans and optimizes your Mac.
+  documentation: https://github.com/tw93/Mole
+  repository: https://github.com/tw93/Mole
