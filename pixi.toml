@@ -14,6 +14,6 @@ dev-clean = "rm -rf packages-dev"
 fmt = "yamlfmt && taplo fmt"
 
 [dependencies]
-yamlfmt = ">=0.20.0,<0.21"
-rattler-build = ">=0.55.0,<0.56"
+yamlfmt = ">=0.21.0,<0.22"
+rattler-build = ">=0.55.1,<0.56"
 taplo = ">=0.10.0,<0.11"

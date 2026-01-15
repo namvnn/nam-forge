@@ -17,21 +17,21 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-15.2.0-hdf11a46_16.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.6.0-h26f9b46_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/patchelf-0.17.2-h58526e2_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/rattler-build-0.55.0-he64ecbb_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/rattler-build-0.55.1-he64ecbb_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/taplo-0.10.0-h2d22210_1.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/yamlfmt-0.20.0-hfc2019e_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/yamlfmt-0.21.0-hfc2019e_0.conda
       osx-64:
       - conda: https://conda.anaconda.org/conda-forge/noarch/ca-certificates-2025.11.12-hbd8a1cb_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/openssl-3.6.0-h230baf5_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-64/rattler-build-0.55.0-h4728fb8_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/rattler-build-0.55.1-h4728fb8_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/taplo-0.10.0-hffa81eb_1.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-64/yamlfmt-0.20.0-hccc6df8_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/yamlfmt-0.21.0-hccc6df8_0.conda
       osx-arm64:
       - conda: https://conda.anaconda.org/conda-forge/noarch/ca-certificates-2025.11.12-hbd8a1cb_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/openssl-3.6.0-h5503f6c_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/rattler-build-0.55.0-h6fdd925_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/rattler-build-0.55.1-h6fdd925_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/taplo-0.10.0-h2b2570c_1.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/yamlfmt-0.20.0-h820172f_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/yamlfmt-0.21.0-h820172f_0.conda
 packages:
 - conda: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
   sha256: fe51de6107f9edc7aa4f786a70f4a883943bc9d39b3bb7307c04c41410990726
@@ -153,9 +153,9 @@ packages:
   license_family: GPL
   size: 94048
   timestamp: 1673473024463
-- conda: https://conda.anaconda.org/conda-forge/linux-64/rattler-build-0.55.0-he64ecbb_0.conda
-  sha256: e298cd1344d9059f51246a3ea4733b42fad38f254d3655889c5ee6349e9963f4
-  md5: a36d6e58d8260e43e893c47ea441ce8b
+- conda: https://conda.anaconda.org/conda-forge/linux-64/rattler-build-0.55.1-he64ecbb_0.conda
+  sha256: d4115e45191c507e70c15d4fc0cf4bd283c64214c05f0ee6e35811b2d76a2348
+  md5: b6a10478e09eedf17c5a9f2a1e334c00
   depends:
   - patchelf
   - __glibc >=2.17,<3.0.a0
@@ -165,30 +165,30 @@ packages:
   - __glibc >=2.17
   license: BSD-3-Clause
   license_family: BSD
-  size: 17660226
-  timestamp: 1766154507554
-- conda: https://conda.anaconda.org/conda-forge/osx-64/rattler-build-0.55.0-h4728fb8_0.conda
-  sha256: 641378066f6bf94156d6cac4656fb09e915d106f011e73d2f25f2b817adf830b
-  md5: 8bdec9934155ec538f4d1687e753f387
+  size: 17663929
+  timestamp: 1767788793229
+- conda: https://conda.anaconda.org/conda-forge/osx-64/rattler-build-0.55.1-h4728fb8_0.conda
+  sha256: 3dbef844ccb2fb28fe6c2b5e315155274e1aac5afff2a368452f4dd365442c2c
+  md5: 1ca76f21400eff10be29693ec70e2e23
   depends:
   - __osx >=10.13
   constrains:
   - __osx >=10.13
   license: BSD-3-Clause
   license_family: BSD
-  size: 16060629
-  timestamp: 1766140351883
-- conda: https://conda.anaconda.org/conda-forge/osx-arm64/rattler-build-0.55.0-h6fdd925_0.conda
-  sha256: 3131bbb52d67096e49813f0615214443a4215ccfc587e34a24c03ed3f0bcde06
-  md5: 4f6d4b933cf8d4eb2d032339b25933d1
+  size: 16062039
+  timestamp: 1767788815088
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/rattler-build-0.55.1-h6fdd925_0.conda
+  sha256: 7d31a25e45823fc4fda6281b019c7875d2626ea8b1522cd58c56c6035b92e5c5
+  md5: 6b38c4d55fbdf0f06d3c08674d2a9379
   depends:
   - __osx >=11.0
   constrains:
   - __osx >=11.0
   license: BSD-3-Clause
   license_family: BSD
-  size: 15108916
-  timestamp: 1766140324162
+  size: 15105783
+  timestamp: 1767788828061
 - conda: https://conda.anaconda.org/conda-forge/linux-64/taplo-0.10.0-h2d22210_1.conda
   sha256: 7d313578d79ece2b328084d906958888b5a474326a24833317d95a71e264b219
   md5: a4935b2eea119342f6a9d666e821984d
@@ -226,26 +226,26 @@ packages:
   license_family: MIT
   size: 4005794
   timestamp: 1748302845549
-- conda: https://conda.anaconda.org/conda-forge/linux-64/yamlfmt-0.20.0-hfc2019e_0.conda
-  sha256: 37ea6521346c6bed6b7f82a44cc69a7cb32f2880d428c3b8af8e3da200e44c7e
-  md5: 8df83429be12d6db1f7b92d9c4bb2a36
+- conda: https://conda.anaconda.org/conda-forge/linux-64/yamlfmt-0.21.0-hfc2019e_0.conda
+  sha256: a0e0b81569d3886f551645c090f54adbf9f72c4f66d68aa4b02da8a2bcd1c304
+  md5: 71076b731b8ec6483181df878f382576
   license: Apache-2.0
   license_family: APACHE
-  size: 1769760
-  timestamp: 1764801548832
-- conda: https://conda.anaconda.org/conda-forge/osx-64/yamlfmt-0.20.0-hccc6df8_0.conda
-  sha256: fd4a8f3ededbe467b88bb7563d004d097d4497d8cdccf1831e026bce7aeeebfc
-  md5: 8cde24633a181efbfb8b63ddb2824266
+  size: 1839020
+  timestamp: 1767643136135
+- conda: https://conda.anaconda.org/conda-forge/osx-64/yamlfmt-0.21.0-hccc6df8_0.conda
+  sha256: 8416d4106be78a8c526d1ed173e9d13bfb22a6d2c5c46a986a5ef0882da68f37
+  md5: 6a78a218ffa6e7cff0b0f6747b57a8e2
   constrains:
   - __osx >=10.12
   license: Apache-2.0
   license_family: APACHE
-  size: 1790039
-  timestamp: 1764801584936
-- conda: https://conda.anaconda.org/conda-forge/osx-arm64/yamlfmt-0.20.0-h820172f_0.conda
-  sha256: c1cef6b670849c79da13360254a3faeb9f1ab2154d5f3ad736b59423bbf0cb5a
-  md5: d60225439f85a6abc7a8065d5b55750f
+  size: 1857511
+  timestamp: 1767643180159
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/yamlfmt-0.21.0-h820172f_0.conda
+  sha256: bd8ff3903547223d48eb96e9d3acefe1d58fc40d3bcf50f88c75e6fe92789918
+  md5: 8cc545aacae2779dc887e9cd187d65ca
   license: Apache-2.0
   license_family: APACHE
-  size: 1622540
-  timestamp: 1764801606461
+  size: 1679631
+  timestamp: 1767643185192
