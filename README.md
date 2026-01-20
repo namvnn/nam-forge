@@ -3,6 +3,7 @@
 `nam-forge` is a collection of missing recipes for [Pixi](https://pixi.sh) package manager that I could
 not find in public forges such as [conda-forge](https://github.com/conda-forge).
 
+- [alacritty-sixel](https://github.com/ayosec/alacritty)
 - [mole](https://github.com/tw93/Mole)
 - [ni](https://github.com/antfu-collective/ni)
 - [qutebrowser](https://github.com/qutebrowser/qutebrowser)
