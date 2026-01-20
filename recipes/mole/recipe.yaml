@@ -12,7 +12,7 @@ source:
   sha256: ${{ sha256 }}
 
 build:
-  script: 
+  script:
     - make build
     - mkdir "${PREFIX}/bin"
     - mv ./mo  ./mole ./bin/ ./lib/ "${PREFIX}/bin"
