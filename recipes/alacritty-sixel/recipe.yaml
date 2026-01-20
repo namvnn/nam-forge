@@ -1,0 +1,46 @@
+context:
+  name: alacritty-sixel
+  version: 0.16.1
+  sha256: 2b0b88ea868daf9282a8a77d7dd5cd2f787f3227cd4281bd6a171d811057e096
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/ayosec/alacritty/archive/refs/tags/v${{ version }}-graphics.tar.gz
+  sha256: ${{ sha256 }}
+
+build:
+  number: 3
+
+requirements:
+  build:
+    - ${{ compiler('rust') }}
+    - ${{ compiler('c') }}
+    - cargo-bundle-licenses
+    - cargo-auditable
+    - pkg-config
+  host:
+    - if: linux
+      then:
+        - fontconfig
+        - expat
+        - libxcb
+        - libxkbcommon
+
+tests:
+  - script:
+      - alacritty --version
+
+about:
+  homepage: https://alacritty.org
+  license: Apache-2.0 OR MIT
+  license_file:
+    - LICENSE-MIT
+    - LICENSE-APACHE
+    - THIRDPARTY.yml
+  summary: A cross-platform, OpenGL terminal emulator with Sixel support
+  description: A cross-platform, OpenGL terminal emulator with Sixel support.
+  documentation: https://alacritty.org
+  repository: https://github.com/ayosec/alacritty
