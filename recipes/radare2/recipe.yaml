@@ -1,7 +1,6 @@
 context:
   name: radare2
   version: 6.0.7
-  sha256: 099af2b2ad97295c81f7ee6ed3ea8da961b5c66a08e1d2701722912f50d791cc
 
 package:
   name: ${{ name }}
@@ -9,7 +8,7 @@ package:
 
 source:
   url: https://github.com/radareorg/${{ name }}/releases/download/${{ version }}/${{ name }}-${{ version }}.tar.xz
-  sha256: ${{ sha256 }}
+  sha256: 099af2b2ad97295c81f7ee6ed3ea8da961b5c66a08e1d2701722912f50d791cc
 
 build:
   script: ./sys/install.sh --install

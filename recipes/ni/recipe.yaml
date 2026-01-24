@@ -1,7 +1,6 @@
 context:
   name: ni
   version: 28.0.0
-  sha256: c42870d682f7192d822f1f59660a1296ea1184e0bb0e107e44e6c564df90c458
 
 package:
   name: ${{ name }}
@@ -9,7 +8,7 @@ package:
 
 source:
   url: https://registry.npmjs.org/@antfu/${{ name }}/-/${{ name }}-${{ version }}.tgz
-  sha256: ${{ sha256 }}
+  sha256: c42870d682f7192d822f1f59660a1296ea1184e0bb0e107e44e6c564df90c458
   file_name: ${{ name }}-${{ version }}.tgz
 
 build:
