@@ -4,6 +4,7 @@
 not find in public forges such as [conda-forge](https://github.com/conda-forge).
 
 - [alacritty-sixel](https://github.com/ayosec/alacritty)
+- [bun](https://github.com/oven-sh/bun)
 - [mole](https://github.com/tw93/Mole)
 - [ni](https://github.com/antfu-collective/ni)
 - [qutebrowser](https://github.com/qutebrowser/qutebrowser)

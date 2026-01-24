@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Nam's recipes for Pixi package manager"
 authors = ["Nam Nguyen <nguyenvietnam2401@gmail.com>"]
 channels = ["conda-forge"]
-platforms = ["osx-64", "osx-arm64", "linux-64"]
+platforms = ["osx-64", "osx-arm64", "linux-64", "linux-aarch64"]
 
 [tasks]
 build = "rattler-build build --recipe-dir . --output-dir packages --skip-existing all"
