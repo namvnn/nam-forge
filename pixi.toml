@@ -7,7 +7,7 @@ channels = ["conda-forge"]
 platforms = ["osx-64", "osx-arm64", "linux-64", "linux-aarch64"]
 
 [tasks]
-build = "rattler-build build --recipe-dir . --output-dir packages --skip-existing all"
+build = "rattler-build build --recipe-dir ./recipes --output-dir packages --skip-existing all"
 build-clean = "find packages -depth 1 -not -name osx-64 -not -name noarch -not -name osx-arm64 -not -name linux-64 -print -exec rm -rf '{}' '+'"
 dev = "rattler-build build --output-dir packages-dev --recipe"
 dev-clean = "rm -rf packages-dev"

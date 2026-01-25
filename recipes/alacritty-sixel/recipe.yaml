@@ -1,6 +1,7 @@
 context:
   name: alacritty-sixel
   version: 0.16.1
+  checksum: 2b0b88ea868daf9282a8a77d7dd5cd2f787f3227cd4281bd6a171d811057e096
 
 package:
   name: ${{ name }}
@@ -8,7 +9,7 @@ package:
 
 source:
   url: https://github.com/ayosec/alacritty/archive/refs/tags/v${{ version }}-graphics.tar.gz
-  sha256: 2b0b88ea868daf9282a8a77d7dd5cd2f787f3227cd4281bd6a171d811057e096
+  sha256: ${{ checksum }}
 
 build:
   number: 3

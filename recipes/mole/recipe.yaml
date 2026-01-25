@@ -1,6 +1,7 @@
 context:
   name: mole
-  version: 1.22.1
+  version: 1.23.2
+  checksum: c164ef840edd654786f71ef7d7510c4edbdac5120ddcee1b5e152fa5a7e81544
 
 package:
   name: ${{ name }}
@@ -8,7 +9,7 @@ package:
 
 source:
   url: https://github.com/tw93/Mole/archive/refs/tags/V${{ version }}.tar.gz
-  sha256: ba7c2ab8af2d99dc00e6e91eaaa64f860d997f072625e7440bfba2099a1ddf54
+  sha256: ${{ checksum }}
 
 build:
   script:
