@@ -1,7 +1,7 @@
 context:
   name: mole
-  version: 1.24.0
-  checksum: 95ec25b2a4f63c3c10cd1fafe25e6520dde57faa833a58859e40b3636f44c3d1
+  version: 1.25.0
+  checksum: df22d7f2670b5331dc6c5d3ecef4c34adb7e3d3b925a36501df755835388cda4
 
 package:
   name: ${{ name }}
