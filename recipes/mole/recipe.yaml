@@ -1,7 +1,7 @@
 context:
   name: mole
   version: 1.35.0
-  checksum: c9d9b30b2783946cb38ea98bc157f7becfb320f140fdedf0ec01d05cfcab2053
+  sha256: c9d9b30b2783946cb38ea98bc157f7becfb320f140fdedf0ec01d05cfcab2053
 
 package:
   name: ${{ name }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/tw93/Mole/archive/refs/tags/V${{ version }}.tar.gz
-  sha256: ${{ checksum }}
+  sha256: ${{ sha256 }}
 
 build:
   script:

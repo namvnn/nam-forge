@@ -1,7 +1,7 @@
 context:
   name: radare2
   version: 6.0.8
-  checksum: f4cd10c80706e48309c8310ecf82dbb43128c1ccd236481904977845fec931d6
+  sha256: f4cd10c80706e48309c8310ecf82dbb43128c1ccd236481904977845fec931d6
 
 package:
   name: ${{ name }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/radareorg/${{ name }}/releases/download/${{ version }}/${{ name }}-${{ version }}.tar.xz
-  sha256: ${{ checksum }}
+  sha256: ${{ sha256 }}
 
 build:
   script: ./sys/install.sh --install --prefix="${PREFIX}"
