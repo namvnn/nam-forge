@@ -1,7 +1,7 @@
 context:
   name: mole
-  version: 1.35.0
-  sha256: c9d9b30b2783946cb38ea98bc157f7becfb320f140fdedf0ec01d05cfcab2053
+  version: 1.39.1
+  sha256: 5f4b136481cef9db678629392a3f62c2dbdc9cf9edab5449f8b2bea4842717b2
 
 package:
   name: ${{ name }}
