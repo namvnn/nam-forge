@@ -1,0 +1,59 @@
+context:
+  name: libptytty
+  version: 2.0
+  sha256: 8033ed3aadf28759660d4f11f2d7b030acf2a6890cb0f7926fb0cfa6739d31f7
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://dist.schmorp.de/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: ${{ sha256 }}
+
+build:
+  script:
+    - cmake -S . -B build -DCMAKE_INSTALL_PREFIX="${PREFIX}" -DBUILD_SHARED_LIBS=ON
+    - cmake --build build
+    - cmake --install build
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - cmake
+
+tests:
+  - script:
+      - |
+        echo "
+        #include <stdio.h>
+        #include <libptytty.h>
+
+        int main(void) {
+            ptytty_init();
+            PTYTTY p = ptytty_create();
+
+            if (!p || !ptytty_get(p)) {
+                return 1;
+            }
+
+            printf(\"ok\\n\");
+            ptytty_delete(p);
+
+            return 0;
+        }" > test.c
+      - cc test.c -I./include -L./lib -lptytty -o test
+      - ./test
+
+about:
+  homepage: https://software.schmorp.de/pkg/libptytty.html
+  license: GPL-2.0-or-later
+  license_file: COPYING
+  summary: A Library for OS-independent pseudo-TTY management
+  description: |
+    libptytty is a small library that offers pseudo-tty management in an 
+    OS-independent way. It was created out of frustration over the many 
+    differences of pty/tty handling in different operating systems for the use
+    inside rxvt-unicode.
+  documentation: https://pod.tst.eu/http://cvs.schmorp.de/libptytty/doc/libptytty.3.pod
+  repository: https://cvs.schmorp.de/libptytty

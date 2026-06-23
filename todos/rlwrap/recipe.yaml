@@ -1,0 +1,46 @@
+context:
+  name: rlwrap
+  version: 0.48
+  sha256: b2721b1c0147aaafc98e6a31d875316ba032ad336bec7f2a8bc538f9e3c6db60
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: "https://github.com/hanslub42/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz"
+  sha256: ${{ sha256 }}
+
+build:
+  script:
+    - export LANG='en_AU.UTF-8'
+    - export LC_ALL='en_AU.UTF-8'
+    - export LC_CTYPE='en_AU.UTF-8'
+    - autoreconf --force --install --verbose
+    - ./configure --prefix="${PREFIX}"
+    - make install 
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - autoconf
+    - automake
+  run:
+    - libptytty
+    - ncurses
+    - readline 
+
+tests:
+  - script:
+      - rlwrap --version
+
+about:
+  homepage: https://github.com/hanslub42/rlwrap
+  license: GPL-2.0-or-later
+  license_file: COPYING
+  summary: A readline wrapper
+  description: |
+    rlwrap is a wrapper that uses the GNU Readline library to allow the 
+    comfortable editing and recalling of keyboard input for other commands.
+  documentation: https://github.com/hanslub42/rlwrap
+  repository: https://github.com/hanslub42/rlwrap
