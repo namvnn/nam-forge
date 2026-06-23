@@ -2,18 +2,17 @@
 name = "nam-forge"
 version = "0.1.0"
 description = "Nam's recipes for Pixi package manager"
-authors = ["Nam Nguyen <nguyenvietnam2401@gmail.com>"]
+authors = ["Nam Nguyen <nam@namn.me>"]
 channels = ["conda-forge"]
 platforms = ["osx-64", "osx-arm64", "linux-64", "linux-aarch64"]
 
 [tasks]
-build = "rattler-build build --recipe-dir ./recipes --output-dir packages --skip-existing all"
+build = "rattler-build build --recipe-dir ./recipes --output-dir ./packages --skip-existing all"
 build-clean = "find packages -depth 1 -not -name osx-64 -not -name noarch -not -name osx-arm64 -not -name linux-64 -not -name linux-aarch64 -print -exec rm -rf '{}' '+'"
-dev = "rattler-build build --output-dir packages-dev --recipe"
-dev-clean = "rm -rf packages-dev"
+build-only = "rattler-build build --output-dir ./packages --recipe"
 fmt = "yamlfmt && taplo fmt"
 
 [dependencies]
 yamlfmt = ">=0.21.0,<0.22"
-rattler-build = ">=0.64.1,<0.65"
+rattler-build = ">=0.67.0,<0.68"
 taplo = ">=0.10.0,<0.11"

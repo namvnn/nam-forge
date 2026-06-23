@@ -1,6 +1,5 @@
 # outputs
 packages/
-packages-dev/
 
 # pixi environments
 .pixi/*
