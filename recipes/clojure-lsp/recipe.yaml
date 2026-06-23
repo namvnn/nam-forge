@@ -1,0 +1,52 @@
+context:
+  name: clojure-lsp
+  version: 2026.05.05.12.58.26
+  download_version: 2026.05.05-12.58.26
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  - if: target_platform == "linux-64"
+    then:
+      url: https://github.com/clojure-lsp/${{ name }}/releases/download/${{ download_version }}/clojure-lsp-native-linux-amd64.zip
+      sha256: b456da0fd1db61999ca6ad30648dcc97aef805029040055798fc8248238a30d0
+  - if: target_platform == "linux-aarch64"
+    then:
+      url: https://github.com/clojure-lsp/${{ name }}/releases/download/${{ download_version }}/clojure-lsp-native-linux-aarch64.zip
+      sha256: cc5bcc051b058afc21e548518698ae89626a4ccf76ddbd2a8b2e353d9c8bb601
+  - if: target_platform == "osx-64"
+    then:
+      url: https://github.com/clojure-lsp/${{ name }}/releases/download/${{ download_version }}/clojure-lsp-native-macos-amd64.zip
+      sha256: 4b636b7f2686407f152a06d0d0a1567b193c792e9b8bcf1e95d1abda53b3aa1b
+  - if: target_platform == "osx-arm64"
+    then:
+      url: https://github.com/clojure-lsp/${{ name }}/releases/download/${{ download_version }}/clojure-lsp-native-macos-aarch64.zip
+      sha256: 8b54c19ce3aaf9924b495a9bbf88f2827045a1fac7faaeabddc27dcb96529947
+
+build:
+  script:
+    - wget https://raw.githubusercontent.com/clojure-lsp/clojure-lsp/refs/heads/master/LICENSE
+    - mkdir -p "${PREFIX}/bin"
+    - mv clojure-lsp "${PREFIX}/bin"
+
+requirements:
+  build:
+    - wget
+
+tests:
+  - script:
+      - clojure-lsp --version
+
+about:
+  homepage: https://clojure-lsp.io
+  license: MIT
+  license_file: LICENSE
+  summary: A Language Server for Clojure(script). Taking a Cursive-like approach of statically analyzing code.
+  description: |
+    The goal of this project is to bring great editing tools for Clojure/Clojurescript to all
+    editors and programmatically via its CLI and API. It aims to work alongside you to help you
+    navigate, identify and fix errors, perform refactors and much more!
+  documentation: https://clojure-lsp.io
+  repository: https://github.com/clojure-lsp/clojure-lsp
